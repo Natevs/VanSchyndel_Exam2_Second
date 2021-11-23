@@ -1,11 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-
-var app = express();
-const config = require('./config')
-//const customerRoutes = require('../app/routes/routes')
-
-//app.use('/routes', customerRoutes);
+//var app = express();
+//const config = require('./config')
 
 module.exports = function (app, config) {
     try {
@@ -25,9 +21,9 @@ module.exports = function (app, config) {
 
     app.use(express.json());
 
-    require(config.rootPath + '/app/model/model');
+    require(config.rootPath + '/app/model/widgets');
 
-    const routes = require(config.rootPath + '/app/routes/routes');
+    const routes = require(config.rootPath + '/app/routes/widgets');
     app.use('', routes);
 
     app.use(function (req, res) {
