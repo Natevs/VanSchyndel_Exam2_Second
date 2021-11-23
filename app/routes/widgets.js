@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const theController = require('../controller/widgets');
 
+//retieves all
 router.get('/widgets',theController.getModel );
 
 //retrieves specified by id/primary key

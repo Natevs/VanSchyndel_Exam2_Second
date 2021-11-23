@@ -39,4 +39,3 @@ module.exports = function (app, config) {
         res.send('500 Server Error');
     })
 }
-

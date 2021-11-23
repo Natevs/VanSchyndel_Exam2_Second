@@ -1,4 +1,3 @@
-//var http = require('http');
 const express = require('express');
 const config = require('./config/config');
 
@@ -11,4 +10,3 @@ require('http').createServer(app).listen(config.port, function () {
 });
 
 module.exports = app
-
